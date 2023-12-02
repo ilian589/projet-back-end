@@ -27,6 +27,23 @@ User.init(
       values: ["admin", "user"],
       defaultValue: "user",
     },
+    date_naiss:{
+      type: DataTypes.DATE,
+      allowNull: false,
+      validate:{
+        isDate:true,
+        isBefore:"2023-11-25",
+      },
+    },
+    num_tel:{
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [10,13],
+        isNumeric:true,
+      },
+    },
+
     lastname: DataTypes.STRING,
     firstname: DataTypes.STRING,
     dob: DataTypes.DATE,
