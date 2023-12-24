@@ -22,6 +22,10 @@ Participant.init(
               isNumeric:true,
             },
           },
+        genre:{
+            type:DataTypes.ENUM("H","F"),
+            allowNull:false,
+          },
         lastname: DataTypes.STRING,
         firstname: DataTypes.STRING,
     },

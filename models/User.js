@@ -35,6 +35,10 @@ User.init(
         isBefore:"2023-11-25",
       },
     },
+    genre:{
+      type:DataTypes.ENUM("H","F"),
+      allowNull:false,
+    },
     num_tel:{
       type: DataTypes.STRING,
       allowNull: false,
