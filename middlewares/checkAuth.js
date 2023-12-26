@@ -2,10 +2,10 @@ const jwt = require("jsonwebtoken");
 
 module.exports = function (req, res, next) {
   const authHeader = req.headers.Authorization ?? req.headers.authorization;
-  if (!authHeader) return res.sendStatus(401);
+  if (!authHeader) res.sendStatus(401);
   
   const [type, token] = authHeader.split(/\s+/);
-  if (type !== "Bearer") return res.sendStatus(401);
+  if (type !== "Bearer") res.sendStatus(401);
   
   try {
     const payload = jwt.verify(token, process.env.JWT_SECRET);
