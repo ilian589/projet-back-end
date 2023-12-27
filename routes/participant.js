@@ -3,7 +3,7 @@ const Participant = require("../models/Participant");
 const checkAuth = require("../middlewares/checkAuth");
 const router = Router();
 
-
+var checkAuth = require('../midlewares/checkAuth')
 
 router.get("/participants", checkAuth, async (req, res) => {
   try {
