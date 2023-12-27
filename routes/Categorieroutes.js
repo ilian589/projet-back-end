@@ -3,6 +3,8 @@ const Categorie = require("../models/Categorie");
 const checkAuth = require("../middlewares/checkAuth"); 
 const router = Router();
 
+var checkAuth = require('../midlewares/checkAuth')
+
 
 router.get("/categories", async (req, res) => {
   try {
