@@ -4,6 +4,8 @@ const checkAuth = require("../middlewares/checkAuth");
 const router = new Router();
 
 
+var checkAuth = require('../midlewares/checkAuth')
+
 router.get("/events", async (req, res, next) => {
   try {
     const events = await Event.findAll();
